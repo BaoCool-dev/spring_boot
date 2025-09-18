@@ -18,7 +18,7 @@ public class Video implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	@Column(name = "video_id")
-	private Integer videoId;
+	private Long videoId;
 
 	@Column(name = "active")
 	private Boolean active;
@@ -33,7 +33,7 @@ public class Video implements Serializable {
 	private String title;
 
 	@Column(name = "views")
-	private Integer views;
+	private Long views;
 
 	@ManyToOne
 	@JoinColumn(name = "category_id", nullable = false)
