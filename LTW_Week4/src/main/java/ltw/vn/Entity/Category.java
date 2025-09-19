@@ -19,19 +19,19 @@ public class Category implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "category_id")
+	@Column(name = "CategoryId")
 	private Long  categoryId;
 
-	@Column(name = "categorycode", columnDefinition = "nvarchar(255)")
-	private String categoryCode;
+	@Column(name = "CategoryCode", columnDefinition = "nvarchar(255)")
+	private String categorycode;
 
-	@Column(name = "categoryname", columnDefinition = "nvarchar(255)")
-	private String categoryName;
+	@Column(name = "CategoryName", columnDefinition = "nvarchar(255)")
+	private String categoryname;
 
-	@Column(name = "images")
+	@Column(name = "Images")
 	private String images;
 
-	@Column(name = "status")
+	@Column(name = "Status")
 	private Boolean status;
 
 	@OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

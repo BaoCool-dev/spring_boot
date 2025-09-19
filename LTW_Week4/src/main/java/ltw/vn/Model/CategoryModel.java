@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CategoryModel {
-	private Long categoryId; // ✅ sửa lại chính tả & đồng bộ Entity
-	private String categoryCode;
+	private Long categoryId; 
+	private String categorycode;
 	@NotEmpty
 	@Length(min = 5)
-	private String categoryName;
+	private String categoryname;
 	private String images;
 	private Boolean status;
 	private MultipartFile imageFile;

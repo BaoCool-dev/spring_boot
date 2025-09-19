@@ -31,4 +31,8 @@ public interface CategoryService {
 
 	List<Category> findAll(Sort sort);
 
+	Page<Category> findByCategorynameContaining(String name, Pageable pageable);
+
+	List<Category> findByCategorynameContaining(String name);
+
 }

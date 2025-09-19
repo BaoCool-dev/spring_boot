@@ -10,32 +10,32 @@ import lombok.AllArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "videos")
+@Table(name = "Videos")
 public class Video implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
-	@Column(name = "video_id")
+	@Column(name = "VideoId")
 	private Long videoId;
 
-	@Column(name = "active")
+	@Column(name = "Active")
 	private Boolean active;
 
-	@Column(name = "description", columnDefinition = "nvarchar(MAX)")
+	@Column(name = "Description", columnDefinition = "nvarchar(MAX)")
 	private String description;
 
-	@Column(name = "poster", columnDefinition = "nvarchar(255)")
+	@Column(name = "Poster", columnDefinition = "nvarchar(255)")
 	private String poster;
 
-	@Column(name = "title", nullable = false, columnDefinition = "nvarchar(255)")
+	@Column(name = "Title", nullable = false, columnDefinition = "nvarchar(255)")
 	private String title;
 
-	@Column(name = "views")
+	@Column(name = "Views")
 	private Long views;
 
 	@ManyToOne
-	@JoinColumn(name = "category_id", nullable = false)
+	@JoinColumn(name = "CategoryId")
 	private Category category;
 }
